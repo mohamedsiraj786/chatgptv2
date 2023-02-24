@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mx-auto mt-5 ">
+      <h1 class="chatHead text-center"><🤖Chat GPT Mod💻></h1>
+      <div class="chat">
+        <div class="chat-history">
+          <div *ngFor="let message of messages" class="chat-message" [ngClass]="{'user': message.isFromUser}">
+            <div class="chat-bubble" [ngClass]="{'user': message.isFromUser}">
+              <p class="message" *ngIf="message?.content">{{ message?.content }}</p>
+              <img class="image" *ngIf="message?.img" src={{message?.img}} alt="img" width="400" height="500">
+            </div>
+          </div>
+        </div>
+        <div class="chat-input" id="scroll">
+          <input (keydown.enter)='sendMessage()' [(ngModel)]="newMessageContent" type="text"
+            placeholder="Type your message here...">
+          <button class="btn btn-primary" (click)="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

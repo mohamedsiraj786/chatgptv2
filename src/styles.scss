@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+body {
+  background-image: url("./assets/vecteezy_teenager-boy-bedroom-interior-computers-on-desk_15680118.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
